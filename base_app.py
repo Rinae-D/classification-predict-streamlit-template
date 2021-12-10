@@ -378,26 +378,34 @@ def main():
 		title_tag("Linear Support Vector Evaluation")
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Classification Report</h4>",unsafe_allow_html=True)
 		st.image('resources/Lsvc Classification Report.png',width = 500)
+		st.markdown("""<div> Categories -1 and 0 have f1-cores of 0.623256 and 0.571429 respectively. Whilst, categories 1 and 2 have 0.845070 and 0.820290 </div>""",unsafe_allow_html=True)
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Confusion Matrix</h4>",unsafe_allow_html=True)
 		st.image('resources/Lsvc1 Confusion Matrix.png', width = 500)
+		st.markdown("""<div> Out of 89 points in category -1, 67 were predicted correctly. For category 0 118 out of 189 were predicted correctly, for category 1 780 out of 951 were correct. And 283 out of 353 were correct for category 2.   </div>""",unsafe_allow_html=True)
 		   
 		title_tag("Logistic Regression Evaluation")
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Classification Report</h4>",unsafe_allow_html=True)
 		st.image('resources/Logistic Classification Report.png',width = 500)
+		st.markdown("""<div> Categories -1 and 0 have f1-cores of 0.612440 and 0.576441 respectively. Whilst, categories 1 and 2 have 0.842330 and 0.805839  </div>""",unsafe_allow_html=True)
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Confusion Matrix</h4>",unsafe_allow_html=True)
 		st.image('resources/logistic1 Confusion Matrix.png',width = 500)
+		st.markdown("""<div>  Out of 84 points in category -1, 64 were predicted correctly. For category 0: 115 out of 175 were predicted correctly, for category 1: 788 out of 976 were correct. And 276 out of 348 were correct for category 2.</div>""",unsafe_allow_html=True)
 		   
 		title_tag("Stochastic Gradient Descent Evaluation")
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Classification Report</h4>",unsafe_allow_html=True)
 		st.image('resources/SGD Classification Report.png',width = 500)
+		st.markdown("""<div> Categories -1 and 0 have f1-cores of 0.624390 and 0.546392 respectively. Whilst, categories 1 and 2 have 0.844937 and 0.808889  </div>""",unsafe_allow_html=True)
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Confusion Matrix</h4>",unsafe_allow_html=True)
 		st.image('resources/SGD1 Confusion Matrix.png',width = 500)
+		st.markdown("""<div>  Out of 79 points in category -1, 64 were predicted correctly. For category 0: 106 out of 164 were predicted correctly, for category 1: 801 out of 1001 were correct. And 273 out of 338 were correct for category 2.</div>""",unsafe_allow_html=True)
 		   
 		title_tag("Ridge Classifier Evaluation")
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Classification Report</h4>",unsafe_allow_html=True)
 		st.image('resources/Ridge Classification Report.png',width = 500)
+		st.markdown("""<div> Categories -1 and 0 have f1-cores of 0.584158 and 0.561576 respectively. Whilst, categories 1 and 2 have 0.845328 and 0.792507  </div>""",unsafe_allow_html=True)
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Confusion Matrix</h4>",unsafe_allow_html=True)
 		st.image('resources/Ridge1 Confusion Matrix.png',width = 500)
+		st.markdown("""<div>  Out of 76 points in category -1, 59 were predicted correctly. For category 0: 114 out of 182 were predicted correctly, for category 1: 787 out of 967 were correct. And 275 out of 357 were correct for category 2.</div>""",unsafe_allow_html=True)
 
 		title_tag("Comparing Models")
 		st.markdown("<h4 style='color:lightblue; text-align:center !important'>Dataframe Containing Model Performances</h4>",unsafe_allow_html=True)
@@ -406,21 +414,11 @@ def main():
 		st.markdown("""<div>
 				<h5 style='color:lightblue'> Key Observations</h5>
 				<ul>
-					<li>
-						The models predicts Pro and News tweets very well, on average the f1-score for pro and news tweets is 0.84 and 0.80 respectively. Anti and neutral tweets perform on the lover end averaging f1-scores of 0.60 and 0.55 repectively.
-						
-			
-				""",unsafe_allow_html=True)
-		st.markdown("""
-					<li>
-						The models have a combined average mean f1-score of 0.78, and combined overall average accuracy of 0.79.
+					<li> On avarage the the -1 and 0 categories had poor precdictions with lower f1-scores averaging 0.58. While, category 1 and 2 had good predictions averaging 0.82 """,unsafe_allow_html=True)
+		st.markdown("""<li>
+						The f1-scores indictae that there is a clear imbalance in the dataset provided. This can result in bias towards the categories with the most data, in this case category 1 and 2.
 					</li>
 				""",unsafe_allow_html=True)
-		
-		st.markdown("""
-					<li>
-						On the training data the models performed more or less the same with notable but little difference as shown by above tables. However, on Unseen data the ridge and logistic classifiers outperform the linear and Stochastic Gradient Descent classifiers. 
-					</li>""",unsafe_allow_html=True)
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 
