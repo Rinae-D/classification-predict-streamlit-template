@@ -40,13 +40,14 @@ import pandas as pd
 import numpy as np
 import pickle 
 import re
+import base64
 import string
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.tokenize import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
-import base64
+
 
 
 # Vectorizer
